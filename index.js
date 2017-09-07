@@ -15,6 +15,7 @@ module.exports = {
     require.resolve('babel-preset-react'),
   ],
   plugins: [
+    require.resolve('babel-plugin-external-helpers'),
     require.resolve('babel-plugin-transform-class-properties'),
     [
       require.resolve('babel-plugin-transform-object-rest-spread'),
@@ -32,14 +33,6 @@ module.exports = {
       require.resolve('babel-plugin-transform-regenerator'),
       {
         async: false,
-      },
-    ],
-    [
-      require.resolve('babel-plugin-transform-runtime'),
-      {
-        helpers: true,
-        polyfill: false,
-        regenerator: true,
       },
     ],
   ],
